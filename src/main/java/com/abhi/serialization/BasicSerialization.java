@@ -74,7 +74,7 @@ public class BasicSerialization {
 		Cat obj = new Cat(color, 10);
 
 		try {
-			FileOutputStream fs = new FileOutputStream("testSer.txt");
+			FileOutputStream fs = new FileOutputStream("corejava/src/main/resources/testSer.ser");
 
 			ObjectOutputStream os = new ObjectOutputStream(fs);
 
@@ -92,7 +92,7 @@ public class BasicSerialization {
 		}
 
 		try {
-			FileInputStream fi = new FileInputStream("testSer.txt");
+			FileInputStream fi = new FileInputStream("corejava/src/main/resources/testSer.ser");
 			ObjectInputStream oi = new ObjectInputStream(fi);
 
 			Cat obj1 = (Cat) oi.readObject();

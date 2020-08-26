@@ -39,10 +39,10 @@ public class InheritSerialize {
 		Dog dog = new Dog("German", 80);
 
 		try {
-			FileOutputStream fo = new FileOutputStream("test2.txt");
+			FileOutputStream fo = new FileOutputStream("corejava/src/main/resources/dog.ser");
 
 			ObjectOutputStream os = new ObjectOutputStream(fo);
-			System.out.println("Before serialize" + dog.name + " " + dog.weight);
+			System.out.println("Before serialize " + dog.name + " " + dog.weight);
 			os.writeObject(dog);
 
 			os.flush();
@@ -55,11 +55,11 @@ public class InheritSerialize {
 
 	public static void derializeFile() {
 		try {
-			FileInputStream fis = new FileInputStream("test2.txt");
+			FileInputStream fis = new FileInputStream("corejava/src/main/resources/dog.ser");
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			
 			Dog dogd = (Dog) ois.readObject();
-			System.out.println("After serialize" + dogd.name + " " + dogd.weight);
+			System.out.println("After serialize " + dogd.name + " " + dogd.weight);
 			
 			ois.close();
 		} catch (Exception e){

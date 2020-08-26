@@ -12,7 +12,9 @@ class Employee implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+	public static String DEPT = "Finance";
+
+	// transient prevent data not to be serialized
 	transient private int id;
 	private String name;
 
@@ -40,20 +42,20 @@ class Employee implements Serializable {
 }
 
 public class TestSerialization {
+
 	public static void main(String[] args) {
 		serializeFile();
-
 		derializeFile();
 	}
 
 	public static void serializeFile() {
-		Employee emp = new Employee(1, "Abhi");
+		Employee emp = new Employee(100, "Abhinav");
 
 		try {
-			FileOutputStream fo = new FileOutputStream("test1.txt");
+			FileOutputStream fo = new FileOutputStream("corejava/src/main/resources/emp.ser");
 
 			ObjectOutputStream os = new ObjectOutputStream(fo);
-			System.out.println("Before serialize" + emp.getId() + " " + emp.getName());
+			System.out.println("Before serialize:- " + emp.getId() + " " + emp.getName() + " " + Employee.DEPT);
 			os.writeObject(emp);
 
 			os.flush();
@@ -66,11 +68,11 @@ public class TestSerialization {
 
 	public static void derializeFile() {
 		try {
-			FileInputStream fis = new FileInputStream("test1.txt");
+			FileInputStream fis = new FileInputStream("corejava/src/main/resources/emp.ser");
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			
 			Employee demp = (Employee) ois.readObject();
-			System.out.println("After serialize" + demp.getId() + " " + demp.getName());
+			System.out.println("After serialize:- " + demp.getId() + " " + demp.getName() + " " + Employee.DEPT);
 			
 			ois.close();
 		} catch (Exception e){

@@ -3,10 +3,8 @@ package com.abhi.collection.collections.list;
 import com.abhi.collection.array.Student;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-
-
-
 
 public class ArrayListBasicDemo {
     public static void main(String[] args) {
@@ -22,9 +20,14 @@ public class ArrayListBasicDemo {
 	  students.add(a);
 	  students.add(b);
 	  students.add(c);
-	  System.out.println(students); 
-	  
-	  //students.add(null); //possible to add null values.
+
+	  System.out.println(students);
+	  List<Student> studentsCopy = new ArrayList<>(students);
+		Collections.reverse(students);
+		System.out.println(students);
+	  System.out.println(studentsCopy);
+
+		//students.add(null); //possible to add null values.
 	  
 	  //it is possible to add the same objects again
 	  //students.add(a);

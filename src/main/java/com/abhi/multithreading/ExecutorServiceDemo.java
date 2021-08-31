@@ -13,9 +13,9 @@ public class ExecutorServiceDemo {
 		ExecutorService service = Executors.newFixedThreadPool(coreCount);
 		
 		for (int i = 0; i < 100; i++) {
-			// service.execute(new CpuIntensiveTask());
-			// service.submit(new CpuIntensiveTask());
-			new Thread(new CpuIntensiveTask()).start();
+//			 service.execute(new CpuIntensiveTask());
+			 service.submit(new CpuIntensiveTask());
+//			new Thread(new CpuIntensiveTask()).start();
 		}
 	}
 	

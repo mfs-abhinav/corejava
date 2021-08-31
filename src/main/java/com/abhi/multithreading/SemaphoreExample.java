@@ -1,4 +1,24 @@
-package com.abhi.multithreading.semaphore;
+package com.abhi.multithreading;
+
+import java.util.concurrent.Semaphore;
+
+class NightClub {
+	private Semaphore sem;
+
+	public NightClub() {
+		this.sem = new Semaphore(2);
+	}
+
+	public void enterIntoClub() throws InterruptedException {
+		this.sem.acquire();
+		System.out.println(Thread.currentThread().getName() + " entered into night club");
+	}
+
+	public void leaveFromClub() {
+		this.sem.release();
+		System.out.println(Thread.currentThread().getName() + " leaved from night club");
+	}
+}
 
 public class SemaphoreExample implements Runnable {
 	

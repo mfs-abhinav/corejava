@@ -1,4 +1,4 @@
-package com.abhi.multithreading.callable;
+package com.abhi.multithreading;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 
-public class Main {
+public class CallableDemo {
 
 	public static void main(String[] args) {
 		List<Integer> list = new ArrayList<>();

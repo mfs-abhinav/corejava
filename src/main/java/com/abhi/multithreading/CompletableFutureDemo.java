@@ -1,10 +1,10 @@
-package com.abhi.multithreading.completablefuture;
+package com.abhi.multithreading;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-public class Main {
+public class CompletableFutureDemo {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 				

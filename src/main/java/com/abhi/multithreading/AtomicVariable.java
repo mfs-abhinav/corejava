@@ -1,4 +1,4 @@
-package com.abhi.multithreading.atomicvariable;
+package com.abhi.multithreading;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

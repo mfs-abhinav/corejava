@@ -5,10 +5,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class MyPrinter {
+	private static final long serialVersionUID = 3438430366597490630L;
 
 	private static final Set<Class<?>> WRAPPER_TYPES = new HashSet<Class<?>>() {
-		private static final long serialVersionUID = 3438430366597490630L;
-
 		{
 
 			add(Boolean.class);

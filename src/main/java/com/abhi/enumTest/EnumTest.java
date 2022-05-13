@@ -1,7 +1,7 @@
 package com.abhi.enumTest;
 
 // enum is collection of named constant value.Can contains constructor,method,variables
-// All enum is converted to class. All constant are bt deafult public static final.
+// All enum is converted to class. All constant are by deafult public static final.
 // enum can not extend but implements. enum is child class of java.lang.Enum 
 enum Beer {
 	KF(100), RC(200) {

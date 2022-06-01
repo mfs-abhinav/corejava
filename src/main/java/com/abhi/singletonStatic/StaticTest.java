@@ -1,4 +1,4 @@
-package com.abhi.Static;
+package com.abhi.singletonStatic;
 
 public class StaticTest {
 	

@@ -1,6 +1,6 @@
-package com.abhi.Static;
+package com.abhi.singletonStatic;
 
-import static com.abhi.Static.TestSingleton.*;
+import static com.abhi.singletonStatic.TestSingleton.*;
 
 public class StaticImport {
 
